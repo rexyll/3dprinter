@@ -15,6 +15,7 @@
 - [系统逻辑架构](docs/phase1/architecture/system-architecture.md)
 - [系统上下文图](docs/phase1/architecture/system-context.mmd)
 - [接口控制文档（ICD）](docs/phase1/architecture/interface-control.md)
+- [系统需求—组件—接口追踪矩阵](docs/phase1/architecture/requirements-component-interface-trace.md)
 
 ## 文档维护规范
 - [文档导航](docs/README.md)
