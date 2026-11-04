@@ -1,0 +1,40 @@
+{
+  "status": "experimental test fixture; not a frozen wire protocol",
+  "profile": "json-int-prototype-0.1",
+  "digest": "SHA-256",
+  "vectors": [
+    {
+      "id": "feedrate-basic",
+      "input": {
+        "canonicalization_profile": "json-int-prototype-0.1",
+        "interface_version": "0.1",
+        "operation": "SET_FEEDRATE",
+        "payload": {
+          "feedrate_um_s": 50000
+        },
+        "payload_schema_id": "motion.feedrate",
+        "payload_schema_version": "1"
+      },
+      "canonical_utf8": "{\"canonicalization_profile\":\"json-int-prototype-0.1\",\"interface_version\":\"0.1\",\"operation\":\"SET_FEEDRATE\",\"payload\":{\"feedrate_um_s\":50000},\"payload_schema_id\":\"motion.feedrate\",\"payload_schema_version\":\"1\"}",
+      "sha256": "43563713132979cbae48d43597bef5d3eac4ae829390933c13a6896fa3ef20c7",
+      "notes": "Illustrative integer physical quantity in micrometres per second; not a selected printer speed target."
+    },
+    {
+      "id": "unicode-label",
+      "input": {
+        "canonicalization_profile": "json-int-prototype-0.1",
+        "interface_version": "0.1",
+        "operation": "SET_FEEDRATE",
+        "payload": {
+          "feedrate_um_s": 50000,
+          "label": "PLA-测试"
+        },
+        "payload_schema_id": "motion.feedrate",
+        "payload_schema_version": "1"
+      },
+      "canonical_utf8": "{\"canonicalization_profile\":\"json-int-prototype-0.1\",\"interface_version\":\"0.1\",\"operation\":\"SET_FEEDRATE\",\"payload\":{\"feedrate_um_s\":50000,\"label\":\"PLA-测试\"},\"payload_schema_id\":\"motion.feedrate\",\"payload_schema_version\":\"1\"}",
+      "sha256": "035acb97d5d0350ef09ca0c200448f0a0c3cd08d9a546ccf4d161a5ab7c08779",
+      "notes": "UTF-8 non-ASCII string preservation."
+    }
+  ]
+}
