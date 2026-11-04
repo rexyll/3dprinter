@@ -12,6 +12,9 @@
 - [第一阶段需求基线（已确认参考规格）](docs/phase1/requirements/requirements-baseline.md)
 - [系统需求规格与 SIL 验收追踪](docs/phase1/requirements/system-requirements.md)
 - [技术路线比较](docs/phase1/architecture/technology-route-assessment.md)
+- [系统逻辑架构](docs/phase1/architecture/system-architecture.md)
+- [系统上下文图](docs/phase1/architecture/system-context.mmd)
+- [接口控制文档（ICD）](docs/phase1/architecture/interface-control.md)
 
 ## 文档维护规范
 - [文档导航](docs/README.md)
@@ -20,7 +23,6 @@
 - [项目术语表](docs/GLOSSARY.md)
 
 ## 工程规范与基线
-- [第一阶段需求基线（已确认参考规格，需求细化中）](docs/phase1/requirements/requirements-baseline.md)
 - [来源登记与证据规范](docs/sources/README.md)
 - [来源台账](docs/sources/register.md)
 - [ADR 决策记录](docs/decisions/README.md)
