@@ -9,6 +9,9 @@
 | 需求基线 | [phase1/requirements/requirements-baseline.md](phase1/requirements/requirements-baseline.md) | 用户场景、需求 ID、验收边界和未决项 |
 | 系统需求规格 | [phase1/requirements/system-requirements.md](phase1/requirements/system-requirements.md) | SYS 级行为要求、任务状态、故障响应、SIL 验收和追踪矩阵 |
 | 技术路线评估 | [phase1/architecture/technology-route-assessment.md](phase1/architecture/technology-route-assessment.md) | FFF、SLA、PBF 等工艺路线的项目适配性比较 |
+| 系统逻辑架构 | [phase1/architecture/system-architecture.md](phase1/architecture/system-architecture.md) | 系统分层、数据流、时序域和故障隔离 |
+| 系统上下文图 | [phase1/architecture/system-context.mmd](phase1/architecture/system-context.mmd) | 系统组件与主要控制/反馈流 |
+| 接口控制文档 | [phase1/architecture/interface-control.md](phase1/architecture/interface-control.md) | IF-001 至 IF-009 逻辑接口契约和错误语义 |
 | 来源规范 | [sources/README.md](sources/README.md) | 来源登记字段、证据类型和引用规则 |
 | 来源台账 | [sources/register.md](sources/register.md) | 外部资料及项目输入的来源记录 |
 | 架构决策 | [decisions/README.md](decisions/README.md) | ADR 状态、模板和索引 |
