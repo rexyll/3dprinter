@@ -116,9 +116,9 @@
 ### STM-NEG-006：故障锁存期间从 Paused 恢复
 
 - **目的/关联**：验证 Fault 锁存优先于 Resume；SYS-014。
-- **前置条件**：T1 为 Paused；Safety fixture 已锁存致命故障；故障源仍存在。
-- **事件序列**：发送 Resume(T1)。
-- **预期状态**：保持故障锁存；不得进入 Running。Job State 按状态契约保持 Fault（若故障已将任务置 Fault），或保留 Paused 并由独立安全锁存阻止恢复；测试配置必须明确采用哪一种合法表示，不能出现 Running。
+- **前置条件**：T1 为 Paused；Safety fixture 准备一个仍存在的致命故障源。
+- **事件序列**：先注入 FatalFault，使 Job State 按状态契约转为 Fault 并保留 prior_state=Paused 的诊断上下文；再发送 Resume(T1)。
+- **预期状态**：保持 Fault 锁存；不得进入 Running。
 - **结果/诊断**：返回故障拒绝并关联故障标识。
 - **副作用断言**：无运动、挤出或加热使能请求。
 
