@@ -4,12 +4,13 @@
 
 ## 当前状态
 - 当前阶段：第一阶段（工程实现优先）
-- 当前任务：01-01 目标场景与参考打印技术路线
+- 当前任务：01-02 系统需求与验收指标
 - 状态：正在进行中
 - 总任务计划：[TaskPlan.md](TaskPlan.md)
 
 ## 第一阶段当前工作
 - [第一阶段需求基线（已确认参考规格，需求细化中）](docs/phase1/requirements/requirements-baseline.md)
+- [技术路线比较](docs/phase1/architecture/technology-route-assessment.md)
 
 ## 文档维护规范
 - [文档导航](docs/README.md)
@@ -22,6 +23,7 @@
 - [来源登记与证据规范](docs/sources/README.md)
 - [来源台账](docs/sources/register.md)
 - [ADR 决策记录](docs/decisions/README.md)
+- [ADR-0002：FFF 材料挤出工艺路线](docs/decisions/ADR-0002-fff-material-extrusion.md)
 - [风险登记表](docs/risks/register.md)
 - [问题与假设登记表](docs/risks/open-issues.md)
 - [变更记录](docs/changes/README.md)
