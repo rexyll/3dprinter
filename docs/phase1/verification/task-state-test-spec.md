@@ -449,7 +449,28 @@
 
 **证据状态**：测试代码和 CI 工作流已提交；必须以对应提交的 Actions 运行结果为准。代码存在或工作流文件存在，不等于 CI 已运行/通过。该原型仅验证测试 profile，不验证设备账本、持久化原子性、真实通信协议或物理安全。
 
-## 12. 版本记录
+## 12. 请求账本持久化与崩溃恢复测试规格
+
+详细语义见[请求账本持久化与崩溃恢复契约](../architecture/request-ledger-persistence-and-recovery.md)。以下为待实现的设计用例，不属于现有 7 项载荷规范化单元测试覆盖。
+
+| 测试 ID | 注入点/前置条件 | 预期状态与诊断 | 副作用/事件断言 |
+|---|---|---|---|
+| LEDGER-CRASH-001 | Received 已持久化后崩溃 | 重启可查询 Received | 执行器调用次数为 0 |
+| LEDGER-CRASH-002 | Accepted 已持久化、DispatchIntent 前崩溃 | 恢复为待重新裁决；重新检查安全守卫 | 未重新授权前执行器调用次数为 0 |
+| LEDGER-CRASH-003 | DispatchIntent 提交后、执行器调用前崩溃 | Unknown | 禁止自动重放，调用次数不得因恢复增加 |
+| LEDGER-CRASH-004 | 执行器调用/动作开始后崩溃 | Unknown 或有证据的部分执行 | 禁止重复调用；保留部分执行证据 |
+| LEDGER-CRASH-005 | 动作完成后、Outcome 提交前崩溃 | 无独立可信证据时 Unknown | 禁止重放；有可信证据时验证结果重建来源 |
+| LEDGER-CRASH-006 | Outcome 提交后、Outbox 提交前崩溃 | 恢复已提交结果 | 不重新执行；结果可通过查询或等效事件恢复 |
+| LEDGER-CRASH-007 | Outbox 提交后、事件发送前崩溃 | 恢复待发布事件 | 同 event_id/sequence 重发；动作仍只执行一次 |
+| LEDGER-CRASH-008 | 事件发送后、HOST 确认前断连 | 设备结果保持终态 | 可重发同一事件；HOST 只应用一次 |
+| LEDGER-CRASH-009 | 同一身份提交不同 fingerprint | 冲突拒绝 | 原记录不变，执行器调用次数不增加 |
+| LEDGER-CRASH-010 | 日志尾部截断/校验失败 | LEDGER_UNAVAILABLE / Unknown | 不把损坏账本解释为空账本 |
+| LEDGER-CRASH-011 | boot_epoch 更新中断/回绕模拟 | 会话代际不可确认时受限同步 | 不复用旧会话身份 |
+| LEDGER-CRASH-012 | 快照 watermark 与 outbox 序号竞态 | 保持同步直到一致切面可证明 | 不漏事件、不重复应用 |
+
+这些用例需由 Host/SIL 持久化原型和 VDEV 故障注入实现后执行；测试通过只证明指定存储/模型/构建下的软件恢复行为，不证明真实 MCU NVM 或电源掉电特性。
+
+## 13. 版本记录
 
 | 日期 | 版本 | 变更 |
 |---|---|---|
