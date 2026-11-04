@@ -431,10 +431,27 @@
 - **结果/诊断**：测试报告区分请求身份字段、载荷字段和诊断元数据。
 - **副作用断言**：相同请求身份只允许一次副作用；不同 request_id 不得因此被自动合并。
 
-## 11. 版本记录
+## 11. 规范化原型自动化测试映射
+
+载荷规范化逻辑测试已从设计规格进入独立 Python 原型测试，具体 profile 和边界见[请求载荷规范化文档](../architecture/request-payload-canonicalization.md)第 10 节。
+
+| 测试实现 | 对应规格 | 当前覆盖 |
+|---|---|---|
+| `test_golden_vectors_match_bytes_and_sha256` | STM-POS-011，并扩展跨实现黄金向量要求 | 比较规范化 UTF-8 字节及 SHA-256 |
+| `test_object_key_order_does_not_change_canonical_bytes` | STM-POS-011 | 对象键顺序不影响规范化结果 |
+| `test_array_order_remains_significant` | 规范化数组顺序规则 | 数组顺序变化导致字节变化 |
+| `test_duplicate_json_keys_are_rejected` | STM-NEG-027 | 重复 JSON 键拒绝 |
+| `test_floats_and_non_finite_numbers_are_rejected` | STM-NEG-027 | 浮点数及 NaN 拒绝 |
+| `test_unknown_or_missing_envelope_fields_are_rejected` | STM-NEG-027 / STM-NEG-026 | 原型封装字段严格校验 |
+
+实现位置：`tests/support/payload_canonicalization_reference.py`、`tests/fixtures/payload-canonicalization-vectors.json`、`tests/unit/test_payload_canonicalization.py`。GitHub Actions 工作流：`.github/workflows/python-unit-tests.yml`。
+
+**证据状态**：测试代码和 CI 工作流已提交；必须以对应提交的 Actions 运行结果为准。代码存在或工作流文件存在，不等于 CI 已运行/通过。该原型仅验证测试 profile，不验证设备账本、持久化原子性、真实通信协议或物理安全。
+
+## 12. 版本记录
 
 | 日期 | 版本 | 变更 |
 |---|---|---|
 | 2026-11-04 | 0.1 | 将 STM-NEG-001～015 展开为测试规格，定义通用夹具、事件记录、正向补充映射及未冻结项。 |
 | 2026-11-04 | 0.2 | 增加请求 ID 冲突、事件冲突/缺口、重连快照水位、设备重启后 Unknown 和原请求查询测试。 |
-| 2026-11-04 | 0.3 | 增加动作开始后重启账本丢失、快照 watermark 缺失、HOST/TASK 账本矛盾和设备持久记录恢复测试。 |\n| 2026-11-04 | 0.4 | 增加载荷摘要冲突、规范化版本不兼容、严格解析及黄金向量正向测试。 |
+| 2026-11-04 | 0.3 | 增加动作开始后重启账本丢失、快照 watermark 缺失、HOST/TASK 账本矛盾和设备持久记录恢复测试。 |\n| 2026-11-04 | 0.4 | 增加载荷摘要冲突、规范化版本不兼容、严格解析及黄金向量正向测试。 |\n| 2026-11-04 | 0.5 | 增加实验性规范化原型的自动化测试映射与 CI 证据边界。 |
