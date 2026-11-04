@@ -4,12 +4,12 @@
 
 ## 当前状态
 - 当前阶段：第一阶段（工程实现优先）
-- 当前任务：00-01 仓库初始化与现状审计
+- 当前任务：00-03 来源、证据与引用规范
 - 状态：正在进行中
 - 总任务计划：[TaskPlan.md](TaskPlan.md)
 
 ## 第一阶段当前工作
-- [第一阶段需求基线（草案）](docs/phase1/requirements/requirements-baseline.md)
+- [第一阶段需求基线（已确认参考规格，需求细化中）](docs/phase1/requirements/requirements-baseline.md)
 
 ## 章节任务计划
 - [00 项目治理与知识库规范](docs/TaskPlan/00-governance.md)
