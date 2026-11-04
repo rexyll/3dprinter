@@ -4,7 +4,7 @@
 - **版本**：0.1
 - **日期**：2026-11-04
 - **关联任务**：01-03
-- **依据**：[请求/事件/会话一致性语义](request-event-session-semantics.md)、[接口控制文档 ICD](interface-control.md)、[系统逻辑架构](system-architecture.md)、[任务状态机测试规格](../verification/task-state-test-spec.md)
+- **依据**：[请求/事件/会话一致性语义](request-event-session-semantics.md)、[请求账本持久化与崩溃恢复契约](request-ledger-persistence-and-recovery.md)、[接口控制文档 ICD](interface-control.md)、[系统逻辑架构](system-architecture.md)、[任务状态机测试规格](../verification/task-state-test-spec.md)
 - **需求关联**：SYS-002、SYS-009、SYS-013、SYS-014；SIL-002、SIL-008、SIL-009、SIL-010
 - **边界声明**：本文只分配逻辑责任与定义验收问题，不指定进程部署、存储产品、传输协议或数值参数；不证明固件掉电安全或真实设备安全。
 
@@ -148,7 +148,11 @@ TASK 只能在请求身份与载荷摘要一致时返回原请求阶段/结果�
 | TASK 与 HOST 账本矛盾 | HOST/TASK 接口 | 保留双方证据，报告同步不一致，不猜测 | 新增测试待扩展 |
 | 日志/主机账本丢失 | HOST/LOG | 不把缺失记录当作未执行；通过设备权威查询恢复可确认事实 | 新增测试待扩展 |
 
-## 8. 对 01-03 验收的影响
+## 8. 持久化契约补充
+
+设备侧请求记录字段、DispatchIntent 执行门、Outcome/Outbox 提交关系、boot_epoch、记录完整性以及 A～J 崩溃窗口的逐项恢复裁决，统一以[请求账本持久化与崩溃恢复契约](request-ledger-persistence-and-recovery.md)为细化设计输入。DispatchIntent 已提交而结果未知时，非幂等物理动作必须保持 Unknown，禁止自动重放。结果已持久化而事件未送达时，只允许恢复/重发同一事件身份，不得重新执行动作。
+
+## 9. 对 01-03 验收的影响
 
 本矩阵补足了现有语义提案中的组件责任分配，但仍有下列工作未完成：
 
@@ -161,8 +165,9 @@ TASK 只能在请求身份与载荷摘要一致时返回原请求阶段/结果�
 
 因此，本文件是责任矩阵和设计审查输入，不代表接口冻结、去重账本实现、掉电恢复验证或 SIL 测试通过。
 
-## 9. 变更记录
+## 10. 变更记录
 
 | 日期 | 版本 | 变更 |
 |---|---|---|
 | 2026-11-04 | 0.1 | 建立 HOST/COMM/TASK/SYNC/事件发布器/SIM/TEST 的责任边界、账本权威关系、掉电恢复问题及故障注入矩阵。 |
+| 2026-11-04 | 0.2 | 链接持久化与崩溃恢复契约，明确 DispatchIntent 执行门、Unknown 禁止重放及 Outbox 只重发事件规则。 |
