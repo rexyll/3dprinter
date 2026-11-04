@@ -11,6 +11,10 @@
 ## 第一阶段当前工作
 - [第一阶段需求基线（已确认参考规格，需求细化中）](docs/phase1/requirements/requirements-baseline.md)
 
+## 工程规范与基线
+- [第一阶段需求基线（已确认参考规格，需求细化中）](docs/phase1/requirements/requirements-baseline.md)
+- [来源登记与证据规范](docs/sources/README.md)
+
 ## 章节任务计划
 - [00 项目治理与知识库规范](docs/TaskPlan/00-governance.md)
 - [01 需求与系统架构](docs/TaskPlan/01-requirements-architecture.md)
