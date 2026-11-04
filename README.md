@@ -19,6 +19,7 @@
 - [任务生命周期状态转换契约](docs/phase1/architecture/task-state-transition-contract.md)
 - [请求、事件与会话一致性语义](docs/phase1/architecture/request-event-session-semantics.md)（逻辑协议语义提案，待实现验证）
 - [请求账本与事件同步责任矩阵](docs/phase1/architecture/request-ledger-responsibility-matrix.md)（HOST/COMM/TASK/SYNC 责任与重启恢复边界提案）
+- [请求账本持久化与崩溃恢复契约](docs/phase1/architecture/request-ledger-persistence-and-recovery.md)（DispatchIntent、掉电窗口、Unknown/禁止重放、Outbox 与故障注入设计）
 - [请求载荷规范化、摘要与幂等身份规则](docs/phase1/architecture/request-payload-canonicalization.md)（请求身份、载荷指纹、确定性规范化与版本兼容提案）
 - [任务状态机 SIL 测试规格](docs/phase1/verification/task-state-test-spec.md)（STM-NEG-001～028、STM-POS-001～012；状态机全量测试尚未实现，载荷规范化原型有独立单元测试）
 - [载荷规范化黄金向量](tests/fixtures/payload-canonicalization-vectors.json)
