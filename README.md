@@ -18,7 +18,8 @@
 - [系统需求—组件—接口追踪矩阵](docs/phase1/architecture/requirements-component-interface-trace.md)
 - [任务生命周期状态转换契约](docs/phase1/architecture/task-state-transition-contract.md)
 - [请求、事件与会话一致性语义](docs/phase1/architecture/request-event-session-semantics.md)（逻辑协议语义提案，待实现验证）
-- [任务状态机 SIL 测试规格](docs/phase1/verification/task-state-test-spec.md)（STM-NEG-001～021、STM-POS-001～009；测试代码尚未实现）
+- [请求账本与事件同步责任矩阵](docs/phase1/architecture/request-ledger-responsibility-matrix.md)（HOST/COMM/TASK/SYNC 责任与重启恢复边界提案）
+- [任务状态机 SIL 测试规格](docs/phase1/verification/task-state-test-spec.md)（STM-NEG-001～024、STM-POS-001～010；测试代码尚未实现）
 
 ## 文档维护规范
 - [文档导航](docs/README.md)
