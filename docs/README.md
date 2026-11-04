@@ -15,7 +15,8 @@
 | 需求—组件—接口追踪 | [phase1/architecture/requirements-component-interface-trace.md](phase1/architecture/requirements-component-interface-trace.md) | SYS/SIL 到逻辑组件和接口的覆盖关系及待关闭缺口 |
 | 任务状态转换契约 | [phase1/architecture/task-state-transition-contract.md](phase1/architecture/task-state-transition-contract.md) | 连接/作业正交状态、状态转换守卫、非法转换和 SIL 断言 |
 | 请求/事件/会话一致性语义 | [phase1/architecture/request-event-session-semantics.md](phase1/architecture/request-event-session-semantics.md) | 请求生命周期、幂等去重、事件顺序、会话代际和重连同步的逻辑语义提案 |
-| 任务状态机测试规格 | [phase1/verification/task-state-test-spec.md](phase1/verification/task-state-test-spec.md) | STM-NEG-001～021、STM-POS-001～009 测试步骤、夹具、预期状态/诊断/副作用（尚未实现/执行） |
+| 请求账本与事件同步责任矩阵 | [phase1/architecture/request-ledger-responsibility-matrix.md](phase1/architecture/request-ledger-responsibility-matrix.md) | HOST/COMM/TASK/SYNC 的责任边界、账本权威关系、设备重启恢复和故障注入责任 |
+| 任务状态机测试规格 | [phase1/verification/task-state-test-spec.md](phase1/verification/task-state-test-spec.md) | STM-NEG-001～024、STM-POS-001～010 测试步骤、夹具、预期状态/诊断/副作用（尚未实现/执行） |
 | 来源规范 | [sources/README.md](sources/README.md) | 来源登记字段、证据类型和引用规则 |
 | 来源台账 | [sources/register.md](sources/register.md) | 外部资料及项目输入的来源记录 |
 | 架构决策 | [decisions/README.md](decisions/README.md) | ADR 状态、模板和索引 |
