@@ -46,7 +46,7 @@
 | 章节 | 路径 | 范围 | 状态 |
 |---|---|---|---|
 | 00 项目治理与知识库规范 | `docs/TaskPlan/00-governance.md` | 计划、证据、版本、决策、风险与工作流 | 已完成 |
-| 01 需求与系统架构 | `docs/TaskPlan/01-requirements-architecture.md` | 需求、参考机型、系统分层和接口 | 未完成 |
+| 01 需求与系统架构 | `docs/TaskPlan/01-requirements-architecture.md` | 需求、参考机型、系统分层和接口 | 正在进行中 |
 | 02 机械系统 | `docs/TaskPlan/02-mechanics.md` | 运动机构、机架、挤出、热端、装配 | 未完成 |
 | 03 电气与硬件平台 | `docs/TaskPlan/03-electronics-hardware.md` | 电源、控制板、MCU、驱动、传感器 | 未完成 |
 | 04 BSP、驱动与嵌入式基础 | `docs/TaskPlan/04-bsp-drivers.md` | 启动、外设、HAL、RTOS/Linux | 未完成 |
