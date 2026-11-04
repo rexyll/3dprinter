@@ -20,6 +20,81 @@
 - **关联项**：需求基线第 2 节；FR-004、FR-005、FR-007、FR-011；根目录 TaskPlan.md 第一阶段范围。
 - **复核状态**：已复核（项目用户确认记录）
 
+### SRC-0002：ISO 17296-2:2015 工艺类别与原料概览
+
+- **发布机构/作者**：International Organization for Standardization（ISO）
+- **来源类型**：国际标准原文页面/标准摘要
+- **型号/版本**：ISO 17296-2:2015，Edition 1
+- **发布/修订日期**：2015-01 发布；ISO 页面显示 2026-09-28 复核确认
+- **URL/定位信息**：https://www.iso.org/standard/61626.html；Abstract、General information、Life cycle
+- **访问日期**：2026-11-04
+- **支持的结论**：该标准概述增材制造工艺基础、工艺类别和原料形式，并说明不同类别使用不同材料形式形成几何形状；页面显示该版本在 2026 年复核确认仍为当前版本。
+- **证据摘录/定位**：ISO 页面摘要与版本生命周期信息。
+- **适用范围**：工艺类别与原料概览；不直接提供具体设备性能、工艺窗口或本项目设计参数。
+- **可信度与限制**：标准发布机构页面；当前仅使用公开摘要，未取得并审阅付费标准全文，不据此断言未见到的具体条款。
+- **关联项**：01-01；[技术路线比较](../phase1/architecture/technology-route-assessment.md)
+- **复核状态**：已复核（公开摘要）
+
+### SRC-0003：NIST Additive Manufacturing Technologies
+
+- **发布机构/作者**：National Institute of Standards and Technology（NIST）
+- **来源类型**：政府研究机构官方技术介绍
+- **型号/版本**：网页版本，动态页面
+- **发布/修订日期**：页面未明确标注发布日期；访问时页面可用
+- **URL/定位信息**：https://www.nist.gov/additive-manufacturing/research-areas/technologies
+- **访问日期**：2026-11-04
+- **支持的结论**：NIST 页面介绍材料挤出、粉末床熔融、槽式光聚合、定向能量沉积、粘结剂喷射和材料喷射等工艺，并简述材料挤出逐层成形、槽式光聚合以紫外光固化光敏树脂、粉末床熔融以能量束熔合粉末等原理。
+- **证据摘录/定位**：页面 Additive manufacturing technologies 各工艺分类说明。
+- **适用范围**：工艺原理的概览级介绍；不构成设备选型、成本或安全参数依据。
+- **可信度与限制**：NIST 官方研究机构资料；属于概述页面，具体设计需继续查阅专门标准和原厂资料。
+- **关联项**：01-01；[技术路线比较](../phase1/architecture/technology-route-assessment.md)
+- **复核状态**：已复核（网页访问）
+
+### SRC-0004：FDM - Fused Deposition Modeling, What is it?
+
+- **发布机构/作者**：Dassault Systèmes
+- **来源类型**：厂商/工程软件服务商技术介绍
+- **型号/版本**：网页版本，动态页面
+- **发布/修订日期**：页面显示约 4.9 年前发布；访问时页面可用
+- **URL/定位信息**：https://www.3ds.com/make/service/3d-printing-service/fdm-fused-deposition-modeling；General Principles、General Characteristics
+- **访问日期**：2026-11-04
+- **支持的结论**：材料挤出 FDM/FFF 使用热塑性长丝，经挤出机加热并从喷嘴挤出；喷头按通常为 G-code 的指令路径逐层沉积；页面也说明 FDM 是商标用语，FFF 常用于泛称该工艺。
+- **证据摘录/定位**：页面第 16、30-37 行附近的工艺描述。
+- **适用范围**：工艺原理和术语；不能证明本项目的具体材料参数、器件规格或打印性能。
+- **可信度与限制**：专业工程软件/制造服务商的技术说明；非标准原文，涉及产品/市场表述时需独立核实。
+- **关联项**：01-01；[技术路线比较](../phase1/architecture/technology-route-assessment.md)
+- **复核状态**：已复核（网页访问）
+
+### SRC-0005：Instructions for Resin (SLA) 3D Printing
+
+- **发布机构/作者**：Georgia Tech Invention Studio
+- **来源类型**：大学实验室官方操作指南
+- **型号/版本**：Formlabs Form 4 相关操作流程；2025-09-02 更新
+- **发布/修订日期**：2025-09-02
+- **URL/定位信息**：https://bpb-us-e1.wpmucdn.com/sites.gatech.edu/dist/8/147/files/2025/09/Instructions-for-Resin-SLA-3D-Printing.pdf；第 1-2 节及流程目录
+- **访问日期**：2026-11-04
+- **支持的结论**：SLA 以光照选择性固化液态光敏树脂；该操作指南流程包含树脂选择、切片、打印、清洗、干燥、后固化和去支撑等步骤。
+- **证据摘录/定位**：PDF 第 1 页（文档行 22-35）及流程目录。
+- **适用范围**：该实验室和 Form 4 工作流程的示例；不得推广为所有 SLA 设备的统一操作要求。
+- **可信度与限制**：大学实验室操作资料；设备与材料相关，实际操作必须以对应设备和树脂制造商 SDS/说明书为准。
+- **关联项**：01-01；[技术路线比较](../phase1/architecture/technology-route-assessment.md)
+- **复核状态**：已复核（文档访问）
+
+### SRC-0006：Powder Bed Fusion, How does it work?
+
+- **发布机构/作者**：Dassault Systèmes
+- **来源类型**：厂商/工程软件服务商技术介绍
+- **型号/版本**：网页版本，动态页面
+- **发布/修订日期**：页面显示约 4.9 年前发布；访问时页面可用
+- **URL/定位信息**：https://www.3ds.com/make/guide/process/powder-bed-fusion；Introduction to Powder Bed Fusion
+- **访问日期**：2026-11-04
+- **支持的结论**：PBF 通过热源（主要为激光或电子束）逐层选择性熔合粉末；SLS 成形后零件处于松散粉末中，需进行粉末清理；金属 PBF 子类可能涉及支撑以控制残余应力和变形。
+- **证据摘录/定位**：页面第 5-12 行附近的工艺说明。
+- **适用范围**：PBF 工艺原理和部分子类说明；不能直接支持所有 PBF 设备的统一参数或安全结论。
+- **可信度与限制**：专业工程软件/制造服务商技术介绍；非标准原文，具体工艺与安全控制应查对应设备/材料资料。
+- **关联项**：01-01；[技术路线比较](../phase1/architecture/technology-route-assessment.md)
+- **复核状态**：已复核（网页访问）
+
 ## 待登记来源
 
-暂无。引入任何外部器件参数、标准条款、厂商规格或技术性能事实时，必须先登记来源，再将结论写入对应设计文档。
+暂无。后续引入任何外部器件参数、标准条款、厂商规格或技术性能事实时，必须先登记来源，再将结论写入对应设计文档。
