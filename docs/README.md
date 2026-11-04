@@ -15,9 +15,9 @@
 | 需求—组件—接口追踪 | [phase1/architecture/requirements-component-interface-trace.md](phase1/architecture/requirements-component-interface-trace.md) | SYS/SIL 到逻辑组件和接口的覆盖关系及待关闭缺口 |
 | 任务状态转换契约 | [phase1/architecture/task-state-transition-contract.md](phase1/architecture/task-state-transition-contract.md) | 连接/作业正交状态、状态转换守卫、非法转换和 SIL 断言 |
 | 请求/事件/会话一致性语义 | [phase1/architecture/request-event-session-semantics.md](phase1/architecture/request-event-session-semantics.md) | 请求生命周期、幂等去重、事件顺序、会话代际和重连同步的逻辑语义提案 |
-| 请求账本与事件同步责任矩阵 | [phase1/architecture/request-ledger-responsibility-matrix.md](phase1/architecture/request-ledger-responsibility-matrix.md) | HOST/COMM/TASK/SYNC 的责任边界、账本权威关系、设备重启恢复和故障注入责任 |\n| 请求载荷规范化与幂等身份 | [phase1/architecture/request-payload-canonicalization.md](phase1/architecture/request-payload-canonicalization.md) | 请求身份、载荷指纹、确定性规范化、版本兼容和冲突处理规则 |
-| 任务状态机测试规格 | [phase1/verification/task-state-test-spec.md](phase1/verification/task-state-test-spec.md) | STM-NEG-001～028、STM-POS-001～012 测试步骤、夹具、预期状态/诊断/副作用（尚未实现/执行） |
-| 来源规范 | [sources/README.md](sources/README.md) | 来源登记字段、证据类型和引用规则 |
+| 请求账本与事件同步责任矩阵 | [phase1/architecture/request-ledger-responsibility-matrix.md](phase1/architecture/request-ledger-responsibility-matrix.md) | HOST/COMM/TASK/SYNC 的责任边界、账本权威关系、设备重启恢复和故障注入责任 || 请求载荷规范化与幂等身份 | [phase1/architecture/request-payload-canonicalization.md](phase1/architecture/request-payload-canonicalization.md) | 请求身份、载荷指纹、确定性规范化、版本兼容和冲突处理规则 |
+| 任务状态机测试规格 | [phase1/verification/task-state-test-spec.md](phase1/verification/task-state-test-spec.md) | STM-NEG-001～028、STM-POS-001～012 测试步骤、夹具、预期状态/诊断/副作用；全量状态机测试尚未实现，载荷规范化原型有独立测试 |
+| 载荷规范化黄金向量 | [../tests/fixtures/payload-canonicalization-vectors.json](../tests/fixtures/payload-canonicalization-vectors.json) | 实验性 JSON 整数 profile 的规范化字节和 SHA-256 向量（非正式协议） |\n| 载荷规范化单元测试 | [../tests/unit/test_payload_canonicalization.py](../tests/unit/test_payload_canonicalization.py) | Python 原型单元测试，配套参考实现与 CI 工作流 |\n| 来源规范 | [sources/README.md](sources/README.md) | 来源登记字段、证据类型和引用规则 |
 | 来源台账 | [sources/register.md](sources/register.md) | 外部资料及项目输入的来源记录 |
 | 架构决策 | [decisions/README.md](decisions/README.md) | ADR 状态、模板和索引 |
 | 已批准范围决策 | [decisions/ADR-0001-reference-printer-baseline.md](decisions/ADR-0001-reference-printer-baseline.md) | 第一阶段参考打印机范围 |
