@@ -65,6 +65,27 @@ class PayloadCanonicalizationTests(unittest.TestCase):
         with self.assertRaises(CanonicalizationError):
             parse_strict_json('{"value":NaN}')
 
+    def test_transport_metadata_outside_envelope_is_not_hashed(self) -> None:
+        envelope = self.vectors[0]["input"]
+        message_a = {
+            "envelope": envelope,
+            "message_id": "M1",
+            "correlation_id": "C1",
+            "sent_at": "t1",
+            "retry_count": 0,
+        }
+        message_b = {
+            "envelope": envelope,
+            "message_id": "M2",
+            "correlation_id": "C2",
+            "sent_at": "t2",
+            "retry_count": 3,
+        }
+        self.assertEqual(
+            payload_sha256(message_a["envelope"]),
+            payload_sha256(message_b["envelope"]),
+        )
+
     def test_unknown_or_missing_envelope_fields_are_rejected(self) -> None:
         envelope = dict(self.vectors[0]["input"])
         envelope["unversioned_extra"] = 1
