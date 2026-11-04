@@ -11,6 +11,7 @@
 
 - 系统上下文与主数据流图：[system-context.mmd](system-context.mmd)。
 - 接口逻辑契约：[接口控制文档（ICD）](interface-control.md)。
+- 需求到组件/接口追踪：[系统需求—组件—接口追踪矩阵](requirements-component-interface-trace.md)。
 
 1. 先建立可在纯软件环境运行的端到端闭环，真实硬件不是 SIL 启动条件。
 2. 控制逻辑通过设备抽象接口访问运动、温度、限位和风扇能力；虚拟后端是第一阶段默认执行后端。
