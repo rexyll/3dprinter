@@ -4,12 +4,18 @@
 
 ## 当前状态
 - 当前阶段：第一阶段（工程实现优先）
-- 当前任务：00-05 知识库导航与维护流程
+- 当前任务：01-01 目标场景与参考打印技术路线
 - 状态：正在进行中
 - 总任务计划：[TaskPlan.md](TaskPlan.md)
 
 ## 第一阶段当前工作
 - [第一阶段需求基线（已确认参考规格，需求细化中）](docs/phase1/requirements/requirements-baseline.md)
+
+## 文档维护规范
+- [文档导航](docs/README.md)
+- [贡献指南](docs/CONTRIBUTING.md)
+- [写作规范](docs/STYLE_GUIDE.md)
+- [项目术语表](docs/GLOSSARY.md)
 
 ## 工程规范与基线
 - [第一阶段需求基线（已确认参考规格，需求细化中）](docs/phase1/requirements/requirements-baseline.md)
