@@ -433,13 +433,14 @@
 
 ## 11. 规范化原型自动化测试映射
 
-载荷规范化逻辑测试已从设计规格进入独立 Python 原型测试，具体 profile 和边界见[请求载荷规范化文档](../architecture/request-payload-canonicalization.md)第 10 节。
+载荷规范化逻辑测试已从设计规格进入独立 Python 原型测试（当前 7 项测试方法），具体 profile 和边界见[请求载荷规范化文档](../architecture/request-payload-canonicalization.md)第 10 节。
 
 | 测试实现 | 对应规格 | 当前覆盖 |
 |---|---|---|
 | `test_golden_vectors_match_bytes_and_sha256` | STM-POS-011，并扩展跨实现黄金向量要求 | 比较规范化 UTF-8 字节及 SHA-256 |
 | `test_object_key_order_does_not_change_canonical_bytes` | STM-POS-011 | 对象键顺序不影响规范化结果 |
 | `test_array_order_remains_significant` | 规范化数组顺序规则 | 数组顺序变化导致字节变化 |
+| `test_transport_metadata_outside_envelope_is_not_hashed` | STM-POS-012 | message_id、correlation_id、发送时间和重试计数位于业务封装之外，不改变载荷摘要 |
 | `test_duplicate_json_keys_are_rejected` | STM-NEG-027 | 重复 JSON 键拒绝 |
 | `test_floats_and_non_finite_numbers_are_rejected` | STM-NEG-027 | 浮点数及 NaN 拒绝 |
 | `test_unknown_or_missing_envelope_fields_are_rejected` | STM-NEG-027 / STM-NEG-026 | 原型封装字段严格校验 |
