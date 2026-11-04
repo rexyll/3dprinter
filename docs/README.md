@@ -7,6 +7,7 @@
 | 领域 | 路径 | 权威内容 |
 |---|---|---|
 | 需求基线 | [phase1/requirements/requirements-baseline.md](phase1/requirements/requirements-baseline.md) | 用户场景、需求 ID、验收边界和未决项 |
+| 技术路线评估 | [phase1/architecture/technology-route-assessment.md](phase1/architecture/technology-route-assessment.md) | FFF、SLA、PBF 等工艺路线的项目适配性比较 |
 | 来源规范 | [sources/README.md](sources/README.md) | 来源登记字段、证据类型和引用规则 |
 | 来源台账 | [sources/register.md](sources/register.md) | 外部资料及项目输入的来源记录 |
 | 架构决策 | [decisions/README.md](decisions/README.md) | ADR 状态、模板和索引 |
