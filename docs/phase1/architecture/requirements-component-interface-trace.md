@@ -81,12 +81,12 @@
 |---|---|---|---|
 | GAP-01 | 坐标系、轴正方向、原点、单位与工作空间边界尚未形成统一规范 | 01-03/02/05 | 坐标系定义、轴映射、边界测试向量 |
 | GAP-02 | 请求/事件序号作用域、重复检测窗口、乱序处理和幂等键尚未冻结；请求身份/载荷指纹/规范化 profile 已有逻辑提案，仍待协议能力与实现验证 | 01-03/01-04/05 | [请求/事件/会话语义](request-event-session-semantics.md)、[请求载荷规范化规则](request-payload-canonicalization.md)、消息时序规则、黄金向量及重复/乱序测试 |
-| GAP-03 | 设备重连后的状态同步、会话代际与旧请求失效规则已有逻辑提案；快照一致性切面、未决请求查询及重启持久性仍待实现验证 | 01-03/01-04/05/07 | [请求/事件/会话语义](request-event-session-semantics.md)、[请求账本责任矩阵](request-ledger-responsibility-matrix.md)、会话状态图、断连重连测试 |
+| GAP-03 | 设备重连后的状态同步、会话代际与旧请求失效规则已有逻辑提案；快照一致性切面、未决请求查询及重启持久性仍待实现验证 | 01-03/01-04/05/07 | [请求/事件/会话语义](request-event-session-semantics.md)、[请求账本责任矩阵](request-ledger-responsibility-matrix.md)、[请求账本持久化与崩溃恢复契约](request-ledger-persistence-and-recovery.md)、会话状态图、断连重连测试 |
 | GAP-04 | 任务暂停安全点、取消完成条件、运动队列与加热输出策略尚未定义 | 01-05/05 | 安全分析、状态转换与故障测试 |
-| GAP-05 | 命令接受、排队、开始执行、执行完成及结果未知的事件边界已有逻辑分阶段定义；设备侧请求账本、载荷冲突校验、HOST/TASK 矛盾裁决及掉电一致性仍待实现验证 | 01-03/01-04/05 | [请求/事件/会话语义](request-event-session-semantics.md)、[请求账本责任矩阵](request-ledger-responsibility-matrix.md)、[请求载荷规范化规则](request-payload-canonicalization.md)、命令状态模型、黄金向量与确认时序测试 |
+| GAP-05 | 命令接受、排队、开始执行、执行完成及结果未知的事件边界已有逻辑分阶段定义；设备侧请求账本、载荷冲突校验、HOST/TASK 矛盾裁决及掉电一致性仍待实现验证 | 01-03/01-04/05 | [请求/事件/会话语义](request-event-session-semantics.md)、[请求账本责任矩阵](request-ledger-responsibility-matrix.md)、[请求载荷规范化规则](request-payload-canonicalization.md)、[请求账本持久化与崩溃恢复契约](request-ledger-persistence-and-recovery.md)、命令状态模型、黄金向量与确认时序测试 |
 | GAP-06 | 虚拟模型数值单位、模型步进、确定性和模型误差预算尚未定义 | 07 | 模型接口说明、模型验证计划 |
 | GAP-07 | 具体超时预算、重试次数和退避策略无平台证据 | 01-04/07 | 平台测量、通信故障场景与 ADR/配置 |
 
 ### 4.3 结论
 
-当前架构在逻辑层面实现了 SYS/SIL 到组件和 IF-001 至 IF-009 的全覆盖；请求账本、设备端裁决、事件发布与重连同步的职责已进一步分配，见[请求账本责任矩阵](request-ledger-responsibility-matrix.md)；请求载荷规范化与幂等指纹逻辑规则已形成，见[请求载荷规范化规则](request-payload-canonicalization.md)。接口的单位/坐标、顺序/幂等、会话恢复、任务暂停取消、命令确认和时序预算仍未冻结。因此 01-03 继续保持“正在进行中”，不得把追踪矩阵完成误判为接口冻结或实现验收。
+当前架构在逻辑层面实现了 SYS/SIL 到组件和 IF-001 至 IF-009 的全覆盖；请求账本、设备端裁决、事件发布与重连同步的职责已进一步分配，见[请求账本责任矩阵](request-ledger-responsibility-matrix.md)；请求载荷规范化与幂等指纹逻辑规则已形成，见[请求载荷规范化规则](request-payload-canonicalization.md)；设备侧持久化阶段、崩溃窗口和恢复裁决另见[请求账本持久化与崩溃恢复契约](request-ledger-persistence-and-recovery.md)。接口的单位/坐标、顺序/幂等、会话恢复、任务暂停取消、命令确认和时序预算仍未冻结。因此 01-03 继续保持“正在进行中”，不得把追踪矩阵完成误判为接口冻结或实现验收。
