@@ -4,7 +4,7 @@
 
 ## 当前状态
 - 当前阶段：第一阶段（工程实现优先）
-- 当前任务：00-04 决策、风险与变更管理
+- 当前任务：00-05 知识库导航与维护流程
 - 状态：正在进行中
 - 总任务计划：[TaskPlan.md](TaskPlan.md)
 
@@ -15,6 +15,10 @@
 - [第一阶段需求基线（已确认参考规格，需求细化中）](docs/phase1/requirements/requirements-baseline.md)
 - [来源登记与证据规范](docs/sources/README.md)
 - [来源台账](docs/sources/register.md)
+- [ADR 决策记录](docs/decisions/README.md)
+- [风险登记表](docs/risks/register.md)
+- [问题与假设登记表](docs/risks/open-issues.md)
+- [变更记录](docs/changes/README.md)
 
 ## 章节任务计划
 - [00 项目治理与知识库规范](docs/TaskPlan/00-governance.md)
