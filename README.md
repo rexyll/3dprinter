@@ -9,7 +9,8 @@
 - 总任务计划：[TaskPlan.md](TaskPlan.md)
 
 ## 第一阶段当前工作
-- [第一阶段需求基线（已确认参考规格，需求细化中）](docs/phase1/requirements/requirements-baseline.md)
+- [第一阶段需求基线（已确认参考规格）](docs/phase1/requirements/requirements-baseline.md)
+- [系统需求规格与 SIL 验收追踪](docs/phase1/requirements/system-requirements.md)
 - [技术路线比较](docs/phase1/architecture/technology-route-assessment.md)
 
 ## 文档维护规范
