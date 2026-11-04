@@ -1,0 +1,19 @@
+flowchart LR
+    Operator[操作者] --> UI[用户界面]
+    UI <--> Host[主机应用服务]
+    Job[模型 / G-code 作业] --> Slicer[作业输入与切片集成]
+    Slicer --> Host
+    Host <--> Comm[设备通信适配层]
+    Comm <--> Firmware[固件命令与任务控制]
+    Firmware --> Motion[运动与挤出控制]
+    Firmware --> Thermal[温控与设备管理]
+    Firmware <--> Safety[安全状态管理]
+    Motion <--> HAL[硬件抽象层 HAL]
+    Thermal <--> HAL
+    HAL <--> Virtual[虚拟设备模型]
+    Sim[仿真场景执行器] <--> Virtual
+    Sim <--> Tests[自动化测试框架]
+    Tests --> CI[CI 构建与验证]
+    Host --> Logs[日志 / 状态 / 测试结果]
+    Firmware --> Logs
+    Tests --> Logs
