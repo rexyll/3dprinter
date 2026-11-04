@@ -34,3 +34,4 @@
 ## ADR 索引
 
 - [ADR-0001：第一阶段参考打印机范围基线](ADR-0001-reference-printer-baseline.md)
+- [ADR-0002：第一阶段采用 FFF 材料挤出工艺](ADR-0002-fff-material-extrusion.md)
