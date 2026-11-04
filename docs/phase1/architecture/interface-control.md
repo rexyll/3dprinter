@@ -6,6 +6,7 @@
 - **关联任务**：01-03
 - **关联架构**：[系统逻辑架构](system-architecture.md)
 - **需求依据**：[系统需求规格](../requirements/system-requirements.md)
+- **追踪依据**：[需求—组件—接口追踪矩阵](requirements-component-interface-trace.md)
 
 ## 1. 目的与适用边界
 
